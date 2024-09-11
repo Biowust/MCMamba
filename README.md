@@ -41,7 +41,6 @@ Download dataset from [this](https://zenodo.org/records/13741332) link.
 python train.py --datasets_name <dataset name> --epochs 500 --batch_size 24 --work_dir <output dir>
 ```
 **4. Test the Mc-Mamba.**  
-First, in the test.py file, you should change the address of the checkpoint in 'resume_model'.
 ```
 python test.py --datasets_name <dataset name> --epochs 500 --batch_size 24 --work_dir <output dir> --best_model_path <the best weight path>
 ```
