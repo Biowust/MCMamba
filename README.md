@@ -1,4 +1,4 @@
-**0. Main Environments.** </br>
+**1. Main Environments.** </br>
 The environment installation procedure can be followed by [VM-UNet](https://github.com/JCruan519/VM-UNet), or by following the steps below:</br>
 Python version should be greater than 3.8
 ```
@@ -22,7 +22,7 @@ pip install tqdm==4.66.4
 
 ```
 Download the pre-trained weights file here [this](https://zenodo.org/records/13743856).Put the downloaded pre-trained files into the ./pre_trained_weights folder.
-**1. Datasets.** </br>
+**2. Datasets.** </br>
 Download dataset from [this](https://zenodo.org/records/13741332) link.
 *A.ISIC2017* </br>
 1. Dataset introduction click this link [this](https://challenge.isic-archive.com/data)</br>
@@ -36,11 +36,11 @@ Download dataset from [this](https://zenodo.org/records/13741332) link.
 *D.ACDC* </br>
 1. Dataset introduction click this link [this](https://acdc.vision.ee.ethz.ch/). </br>
 
-**2. Train the Mc-Mamba.**
+**3. Train the Mc-Mamba.**
 ```
 python train.py --datasets_name <dataset name> --epochs 500 --batch_size 24 --work_dir <output dir>
 ```
-**3. Test the Mc-Mamba.**  
+**4. Test the Mc-Mamba.**  
 First, in the test.py file, you should change the address of the checkpoint in 'resume_model'.
 ```
 python test.py --datasets_name <dataset name> --epochs 500 --batch_size 24 --work_dir <output dir> --best_model_path <the best weight path>
